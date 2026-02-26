@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --bg: #eef4ff;
+  --bg-header: #f6f9ff;
+  --panel: #ffffff;
+  --panel-hover: #f7fbff;
+  --panel-strong: #f2f8ff;
+  --chip: #e6edf7;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #cfd8e7;
+  --accent: #0ea5e9;
+  --accent-soft: #7dd3fc;
+  --shadow: 0 12px 32px -20px rgba(14, 23, 42, 0.45);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #050a16;
+  --bg-header: #070f1f;
+  --panel: #0f172a;
+  --panel-hover: #111d34;
+  --panel-strong: #16243e;
+  --chip: #1e293b;
+  --text: #e2e8f0;
+  --muted: #9fb0c8;
+  --border: #223250;
+  --accent: #06b6d4;
+  --accent-soft: #22d3ee;
+  --shadow: 0 14px 36px -22px rgba(2, 132, 199, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at 10% -20%, rgba(56, 189, 248, 0.18), transparent 40%),
+    radial-gradient(circle at 95% 0%, rgba(16, 185, 129, 0.12), transparent 45%),
+    var(--bg);
+  color: var(--text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  background-color: rgba(125, 211, 252, 0.45);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
