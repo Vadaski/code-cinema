@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import SplashScreen from './components/SplashScreen';
 import { buildAlgorithmSteps, getAlgorithmById, algorithmCatalog } from './algorithms';
 import { AlgorithmGallery } from './components/AlgorithmGallery';
 import { CallStackPanel } from './components/CallStackPanel';
@@ -79,6 +80,7 @@ function App() {
   };
 
   return (
+    <SplashScreen>
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <header className="sticky top-0 z-10 border-b border-[var(--border)] bg-[var(--bg-header)]/95 backdrop-blur-sm">
         <div className="mx-auto flex w-full max-w-[1500px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
@@ -139,6 +141,7 @@ function App() {
         </section>
       </main>
     </div>
+    </SplashScreen>
   );
 }
 
